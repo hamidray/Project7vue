@@ -55,9 +55,11 @@ export default {
             password: '',
             password_confirm: ''
         }
+        
     },
+    
     methods: {
-         handleSubmit(){
+         handleSubmit() {
              const data = {
                  first_name: this.first_name,
                  last_name: this.last_name,
@@ -66,9 +68,9 @@ export default {
                  password_confirm: this.password_confirm
              };
              console.log(data);
-             axios.post('http://localhost:8080/register' , data)
+             axios.post('http://localhost/8000/register' , data)
              .then(
-                 res => {
+                res => {
                      console.log(res)
                  }
              ).catch(
@@ -77,7 +79,7 @@ export default {
                  }
              )
          }
-    }
+   }
 }
 
 </script>

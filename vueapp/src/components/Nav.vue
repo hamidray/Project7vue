@@ -10,10 +10,10 @@
                <a href="#" class="nav-item"></a>
             </li>
             <li class="nav-item">
-               <a href="#" class="nav-link">Login</a>
+               <a href="/Login" class="nav-link">Login</a>
            </li>   
              <li class="nav-item">
-               <a href="#" class="nav-link">Sign up</a>
+               <a href="/Register" class="nav-link">Sign up</a>
              </li>
            </ul>   
          </div>
