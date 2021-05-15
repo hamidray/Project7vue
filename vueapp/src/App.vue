@@ -19,20 +19,19 @@
  export default {
    name:'App',
    components: {
-     Nav,
+     Nav
         
    }
  }
 </script>
 
 <style>
-
 @import url('https://fonts.googleapis.com/css?family=Fira+Sans:400,500,600,700,800');
 * {
   box-sizing: border-box;
   }
   body {
-    background:  #097ff5 !important;
+    background: #C0C0C0!important;
     min-height: 100vh;
     display: flex;
     font-weight: 400;
@@ -50,7 +49,7 @@
      text-align: center;
    }
    .navbar-light {
-     background-color: white;
+     background-color:white;
    }
    
     .auth-wrapper {
