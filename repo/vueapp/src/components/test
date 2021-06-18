@@ -211,3 +211,138 @@ exports.modifySauce = (req, res, next) => {
      }
    );
  };
+
+
+
+
+
+
+
+
+
+ <template>
+  <div>
+    <form @submit="postData" method="post">
+      <h3> Create Post </h3>
+       <input type="text" name="author" placeholder="author" v-model="posts.author"> <br> <br>
+       <input type="text" name="title" placeholder="title" v-model="posts.title"> <br> <br>
+       <button type="submit">Post</button>
+    </form>
+    </div>
+    </template>
+
+<script>
+////import GifsService from '@/services/GifsService'
+//import axios from 'axios'
+
+export default {
+ name: 'Addgifs',
+  data(){
+    return {
+      posts:{
+        author:null,
+        title:null
+        
+     }
+      
+    }
+  
+  },
+  
+  methods:{
+ postData(e)
+    {
+      console.log(this.posts)
+     ////// GifsService.postData
+                
+       //// .then((result) => {
+             ////  console.warn(result) 
+
+          
+          e.preventDefault();
+    }
+  }
+  
+}
+</script>
+
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped lang="scss">
+
+</style>
+
+
+
+
+<template>
+     <form @submit.prevent="sendFile" enctype="multipart/form-data">
+     <div class="field">
+     
+     <div class="file is-boxed is-warning">
+       <label class="file-label">
+       <input 
+            type="file"
+            ref="file"
+            @change="selectFile"
+            class="file-input"
+        />
+          
+         <span class="file-cta">
+           <span class="file-icon">
+             <i class="fas fa-upload"></i> 
+        
+         </span>
+
+         <span class="file-label">
+           Choose a file...
+         </span>
+         </span>
+          
+           <span v-if="file" class="file-name">{{file.name}}</span>
+
+         </label>
+         
+       </div>
+    </div>
+         <button class="button is-info">Send</button>
+
+    </form>
+    </template>
+
+<script>
+import GifsService from '@/services/GifsService'
+//import axios from 'axios'
+export default {
+  name: "Addgifs",
+  data() {
+    return {
+      file: ""
+
+    }
+  },
+  methods: {
+     selectFile() {
+         this.file = this.$refs.file.files[0];
+    },
+    async sendFile() {
+      const formData = new FormData();
+      formData.append('file' , this.file);
+
+
+     try {
+       await GifsService.post('/Addgifs', formData)
+     } catch(err) {
+       console.log(err);
+     }
+
+      
+    }
+  }
+}
+
+</script>
+
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped lang="scss">
+
+</style>  

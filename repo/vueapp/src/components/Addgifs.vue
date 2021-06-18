@@ -1,5 +1,4 @@
-
-<template>
+ <template>
         
   <!--<div class="form-group">
     <label for="exampleFormControlFile1">ADD Gifs</label>
@@ -18,7 +17,7 @@
      <h3>Create Post</h3>
           
         <label for="exampleFormControlTextarea1">GIFs</label>
-         <input type="file" class="form-control-file"   id="exampleFormControlFile1">
+          <input type="text" class="form-control" v-model="gags.author" placeholder="Title" />
         <br>
         <label>Title</label>
          <input type="text" class="form-control" v-model="gags.title" placeholder="Title" />
@@ -26,12 +25,8 @@
        <button class="btn btn-primary btn-block"
         @click="create">
      Send</button>
-          
-  
    </div>
-  
-
-  </template>
+    </template>
 
 <script>
 import GifsService from '@/services/GifsService'
@@ -40,8 +35,8 @@ export default {
   data () {
     return {
       gags: {
-      imageUrl: 'null',
-      title: 'null',
+     author:null,
+      title: null,
       }
     }
   },
@@ -61,5 +56,4 @@ export default {
 </script>
 
 <style>
-
 </style>

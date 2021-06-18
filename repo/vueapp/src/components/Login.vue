@@ -2,7 +2,7 @@
  
    <div class="form-group">
      <h3>Login</h3>
-
+  
         <label>Email</label>
          <input type="email" class="form-control" v-model="email" placeholder="Email" />
         <br>
@@ -14,7 +14,7 @@
      Login</button>
   
    </div>
-    
+   
     
 </template>
 
@@ -22,7 +22,7 @@
 <script>
 import AuthenticationService from '@/services/AuthenticationService'
 export default {
-  //name: 'Login',
+  name: 'Login',
   data () {
     return {
       email: '',
@@ -44,9 +44,11 @@ export default {
       this.$router.push('/')
         
     
-    } 
-      
     }
+    
+     
+    }
+    
   }
 
 

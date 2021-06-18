@@ -1,10 +1,7 @@
 import Api from '@/services/Api'
 
 export default {
-    
-
-     post () {
-         return Api().post('addgifs')
+         post (gags) {
+         return Api().post('addgifs', gags)
      }
 }    
-           

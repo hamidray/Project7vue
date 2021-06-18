@@ -19,6 +19,7 @@
 <script>
 import AuthenticationService from '@/services/AuthenticationService'
 export default {
+  name: 'Register',
     data () {
     return {
         email: '',
@@ -36,7 +37,11 @@ export default {
          this.$router.push('/login')
            this.$store.dispatch('setToken', response.data.token)
            this.$store.dispatch('setUser', response.data.user)
-       }
-    }
+       },
+       
+        
+   }
+   
  }
+ 
 </script>

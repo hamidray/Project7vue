@@ -1,10 +1,12 @@
 
 module.exports = (sequelize, DataTypes) => {
-const Gif = sequelize.define('Gif', {
-   imageUrl: DataTypes.STRING,
-   title: DataTypes.STRING
-})
+   const Gifs = sequelize.define('Gifs', {
+     userId: DataTypes.STRING, 
+     author: DataTypes.STRING,
+     title: DataTypes.STRING,
+     
+   })
+      
+      return Gifs
    
-   return Gif
-
-}
+   }
