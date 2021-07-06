@@ -22,7 +22,7 @@
 <script>
 import AuthenticationService from '@/services/AuthenticationService'
 export default {
-  name: 'Login',
+  ///name: 'Login',
   data () {
     return {
       email: '',

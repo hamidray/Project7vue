@@ -22,6 +22,8 @@ file !== 'index.js'
    const model = require(path.join(__dirname, file))(sequelize, Sequelize.DataTypes)
    //console.log(Sequelize.DataTypes)
     ///const model = sequelize.import(path.join(__dirname, file))
+      
+    db.files = require("../models/image.js")(sequelize, Sequelize);
 
     db[model.name] = model
   })
